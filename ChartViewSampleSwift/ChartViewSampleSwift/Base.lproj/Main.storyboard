@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChartViewSampleSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,26 +21,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nt6-BO-DKh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8sj-Ko-PKF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Nt6-BO-DKh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CbG-ua-G3x"/>
-                            <constraint firstItem="Nt6-BO-DKh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="H34-j0-wXp"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nt6-BO-DKh" secondAttribute="bottom" id="dzn-AA-ipy"/>
-                            <constraint firstAttribute="trailing" secondItem="Nt6-BO-DKh" secondAttribute="trailing" id="ruZ-Nc-Jcb"/>
+                            <constraint firstItem="8sj-Ko-PKF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="08v-M0-Qqe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8sj-Ko-PKF" secondAttribute="bottom" id="3XG-tu-6ni"/>
+                            <constraint firstItem="8sj-Ko-PKF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5Th-xk-PYO"/>
+                            <constraint firstAttribute="trailing" secondItem="8sj-Ko-PKF" secondAttribute="trailing" id="g6N-5c-9cd"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="Nt6-BO-DKh" id="Fu3-Pf-fjT"/>
+                        <outlet property="tableView" destination="8sj-Ko-PKF" id="rfS-DD-fGR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116" y="122.78860569715144"/>
+            <point key="canvasLocation" x="-92" y="65"/>
         </scene>
     </scenes>
 </document>

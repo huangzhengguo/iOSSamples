@@ -18,6 +18,8 @@
 		8F13B3231F41943800FB41CF /* ChartViewSampleSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F13B3221F41943800FB41CF /* ChartViewSampleSwiftUITests.swift */; };
 		8F13B3331F419C0900FB41CF /* PNChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F13B3311F419C0900FB41CF /* PNChartViewController.swift */; };
 		8F13B3341F419C0900FB41CF /* PNChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F13B3321F419C0900FB41CF /* PNChartViewController.xib */; };
+		8F13B3371F41AB8700FB41CF /* LineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F13B3351F41AB8700FB41CF /* LineChartViewController.swift */; };
+		8F13B3381F41AB8700FB41CF /* LineChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F13B3361F41AB8700FB41CF /* LineChartViewController.xib */; };
 		CB5362388B80776BB4E36030 /* Pods_ChartViewSampleSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFE981139631B16E0F4FF5 /* Pods_ChartViewSampleSwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		8F13B3241F41943A00FB41CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F13B3311F419C0900FB41CF /* PNChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartViewController.swift; sourceTree = "<group>"; };
 		8F13B3321F419C0900FB41CF /* PNChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PNChartViewController.xib; sourceTree = "<group>"; };
+		8F13B3351F41AB8700FB41CF /* LineChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartViewController.swift; sourceTree = "<group>"; };
+		8F13B3361F41AB8700FB41CF /* LineChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineChartViewController.xib; sourceTree = "<group>"; };
 		94768DD608E5F4BD246723BD /* Pods_ChartViewSampleSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChartViewSampleSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B7CA7FC21DF5938063B63C /* Pods-ChartViewSampleSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartViewSampleSwiftUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChartViewSampleSwiftUITests/Pods-ChartViewSampleSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C237D8F561E912CD004027BA /* Pods-ChartViewSampleSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartViewSampleSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChartViewSampleSwiftTests/Pods-ChartViewSampleSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 			children = (
 				8F13B3311F419C0900FB41CF /* PNChartViewController.swift */,
 				8F13B3321F419C0900FB41CF /* PNChartViewController.xib */,
+				8F13B3351F41AB8700FB41CF /* LineChartViewController.swift */,
+				8F13B3361F41AB8700FB41CF /* LineChartViewController.xib */,
 			);
 			path = CodeClass;
 			sourceTree = "<group>";
@@ -299,6 +305,7 @@
 			files = (
 				8F13B30D1F41943200FB41CF /* LaunchScreen.storyboard in Resources */,
 				8F13B3341F419C0900FB41CF /* PNChartViewController.xib in Resources */,
+				8F13B3381F41AB8700FB41CF /* LineChartViewController.xib in Resources */,
 				8F13B30A1F41943100FB41CF /* Assets.xcassets in Resources */,
 				8F13B3081F41943000FB41CF /* Main.storyboard in Resources */,
 			);
@@ -449,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F13B3051F41942F00FB41CF /* ViewController.swift in Sources */,
+				8F13B3371F41AB8700FB41CF /* LineChartViewController.swift in Sources */,
 				8F13B3031F41942F00FB41CF /* AppDelegate.swift in Sources */,
 				8F13B3331F419C0900FB41CF /* PNChartViewController.swift in Sources */,
 			);

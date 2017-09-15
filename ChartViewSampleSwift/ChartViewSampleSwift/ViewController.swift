@@ -46,6 +46,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         switch indexPath.row {
         case 0:
             // 1.跳转到PNChart图表示例界面
+            let pnChartViewController = PNChartViewController.init(nibName: "PNChartViewController", bundle: Bundle.main)
+            
+            self.navigationController?.pushViewController(pnChartViewController, animated: true)
             break
         default:
             break

@@ -15,7 +15,6 @@
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @property(nonatomic, strong) NSArray *chartViewTitleArray;
 
 @end
@@ -45,6 +44,9 @@
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
+    NSString *title = [self.chartViewTitleArray objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = title;
     
     return cell;
 }
@@ -54,7 +56,7 @@
         case 0:
             // 1.PNChart图表
             break;
-            
+            // 2.其它类型的图标待添加
         default:
             break;
     }

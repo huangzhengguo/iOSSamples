@@ -12,14 +12,40 @@
 
 import UIKit
 
-class PNChartViewController: UIViewController {
-
+class PNChartViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    @IBOutlet weak var tableView: UITableView!
+    var titleDataSource: NSArray = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        titleDataSource = ["LineChart","BarChart","CircleChart","PieChart","ScatterChart","RadarChart"]
     }
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return titleDataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        if cell.isEqual(nil){
+            cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        }
+        
+        let titltStr = titleDataSource.object(at: indexPath.row)
+        cell.textLabel?.text = titltStr as? String
+        
+        return cell
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

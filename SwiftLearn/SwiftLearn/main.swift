@@ -86,11 +86,17 @@ var controlFlow = ControFlow()
 
 controlFlow.forMethod()
 
+let str = "adslkdjflskjf黄"
 
+let subStr = (str as NSString).substring(from: str.count - 2)
+print(subStr)
 
+let hstring = "1j2k3jj34"
+let wan =  hstring.characters
+    .map{  Int(String($0)) }
+    .filter{ $0 != nil }
 
-
-
+print(wan.count)
 
 
 

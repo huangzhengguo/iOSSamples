@@ -17,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        let launchStoryboard = UIStoryboard.init(name: "LaunchScreen", bundle: nil)
+//
+//        let launchViewController = launchStoryboard.instantiateViewController(withIdentifier: "launchViewController")
+//
+//        let button = UIButton.init(frame: CGRect(x: 100, y: 100, width: 100, height: 100)))
+        
+        Thread.sleep(forTimeInterval: 3)
+        
         return true
     }
 

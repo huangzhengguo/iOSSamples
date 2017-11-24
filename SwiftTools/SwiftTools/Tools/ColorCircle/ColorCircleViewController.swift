@@ -21,8 +21,8 @@ class ColorCircleViewController: UIViewController {
     }
 
     func setViews() -> Void {
-        let manualColorViewFrame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width - 50, height: UIScreen.main.bounds.size.width - 50)
-        manualColorView = ColorCircleView(frame: manualColorViewFrame, channelNum: 5, colorArray: [UIColor.red, UIColor.green, UIColor.blue, UIColor.white, UIColor.yellow], colorPercentArray: [50,50,50,50,50], colorTitleArray: ["1","2","3","4","5"])
+        let manualColorViewFrame = CGRect(x: 0, y: 108, width: UIScreen.main.bounds.size.width - 50, height: UIScreen.main.bounds.size.width - 50)
+        manualColorView = ColorCircleView(frame: manualColorViewFrame, channelNum: 6, colorArray: [UIColor.red, UIColor.green, UIColor.blue, UIColor.white, UIColor.yellow, UIColor.cyan], colorPercentArray: [50,50,50,50,50,50], colorTitleArray: ["1","2","3","4","5","6"])
         
         self.view.addSubview(manualColorView!)
     }

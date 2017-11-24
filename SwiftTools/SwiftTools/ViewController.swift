@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    let toolsTitleArray = ["圆形调光"]
+    let toolsTitleArray = ["圆形调光", "KVO", "Coredata"]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -55,6 +55,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let colorCircleViewController = ColorCircleViewController(nibName: "ColorCircleViewController", bundle: nil)
             
             self.navigationController?.pushViewController(colorCircleViewController, animated: true)
+        } else if indexPath.row == 1 {
+            let stockViewController = StockViewController(nibName: "StockViewController", bundle: nil)
+            
+            self.navigationController?.pushViewController(stockViewController, animated: true)
+        } else if indexPath.row == 2 {
+            let dataCoreExampleViewController = DataCoreExampleViewController(nibName: "DataCoreExampleViewController", bundle: nil)
+            
+            self.navigationController?.pushViewController(dataCoreExampleViewController, animated: true)
         }
     }
     

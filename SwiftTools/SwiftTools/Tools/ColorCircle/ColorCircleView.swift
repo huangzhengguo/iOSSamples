@@ -39,15 +39,17 @@ class ColorCircleView: UIView {
             
             progressView?.tag = 1000 + i
             progressView?.minimumValue = 0.0
-            progressView?.maximumValue = 1000
+            progressView?.maximumValue = 1000.0
             progressView?.layer.zPosition = CGFloat(i)
             progressView?.lineWidth = circleLineWidth
             progressView?.backtrackLineWidth = circleLineWidth
             progressView?.backgroundColor = UIColor.clear
+            progressView?.thumbRadius = circleLineWidth / 2.0
             progressView?.endThumbTintColor = colorArray[i]
             progressView?.endThumbStrokeColor = UIColor.gray
             progressView?.trackFillColor = colorArray[i]
-            progressView?.trackColor = UIColor.gray
+            progressView?.trackColor = colorArray[i].withAlphaComponent(0.5)
+            progressView?.diskColor = UIColor.clear
             progressView?.layer.cornerRadius = (progressView?.frame.size.width)! / 2.0;
             progressView?.clipsToBounds = true
             progressView?.layer.masksToBounds = true
@@ -67,7 +69,6 @@ class ColorCircleView: UIView {
             progressViewCenter = progressView?.center
         }
         
-        //let percentLabelWidth = sqrtf(Float(pow(centerCircleWidth / 2, 2.0) + pow(centerCircleWidth / 2, 2.0)))
         let percentLabelWidth = centerCircleWidth
         percentLabel.layer.zPosition = 1000
         percentLabel.backgroundColor = UIColor.red
@@ -112,7 +113,8 @@ class ColorCircleView: UIView {
     @objc func colorValueChanged(view: UIView) -> Void {
         let progressView: CircularSlider! = view as! CircularSlider;
         
-        percentLabel.text = String(format: "%2.0f%%", progressView.endPointValue)
+        print("progressView.endPointValue = \(progressView.endPointValue)")
+        percentLabel.text = String(format: "%.0f%%", (progressView.endPointValue) / 10.0)
         if passColorValueCallback != nil {
             passColorValueCallback!(progressView.tag - 1000, Int(progressView.endPointValue))
         }
@@ -120,7 +122,7 @@ class ColorCircleView: UIView {
     
     func updateManualCircleView(colorPercentArray: [Int]!) -> Void {
         for i in 0 ..< colorPercentArray.count {
-            progressViewArray![i].endPointValue = CGFloat(colorPercentArray[i])
+            progressViewArray![i].endPointValue = CGFloat(colorPercentArray[i] + 500)
         }
     }
     

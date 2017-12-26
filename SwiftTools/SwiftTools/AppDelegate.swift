@@ -13,21 +13,33 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var launchImageView: UIImageView?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-//        let launchStoryboard = UIStoryboard.init(name: "LaunchScreen", bundle: nil)
-//
-//        let launchViewController = launchStoryboard.instantiateViewController(withIdentifier: "launchViewController")
-//
-//        let button = UIButton.init(frame: CGRect(x: 100, y: 100, width: 100, height: 100)))
         
-        Thread.sleep(forTimeInterval: 3)
+        // 实现启动动画，多张图片变换
+        self.window?.makeKeyAndVisible()
+        launchImageView = UIImageView.init(frame: (self.window?.bounds)!)
+        
+        launchImageView?.animationImages = [UIImage.init(named: "launch1.png")!, UIImage.init(named: "launch2.png")!, UIImage.init(named: "launch3.png")!, UIImage.init(named: "launch3.png")!, UIImage.init(named: "launch3.png")!] // 最后的图片多放几张可以让图片
+        launchImageView?.animationDuration = 4.0  // 隐藏视图时，延迟时间和持续时间之和应该和这个持续时间相等
+        launchImageView?.animationRepeatCount = 1
+
+        UIView.animate(withDuration: 1.0, delay: 3.0, options: .curveLinear, animations: {
+            self.launchImageView?.stopAnimating()
+            self.launchImageView?.alpha = 0.0
+        }) { (finished) in
+            self.launchImageView?.removeFromSuperview()
+        }
+        
+        launchImageView?.startAnimating()
+        
+        self.window?.addSubview(launchImageView!)
+        self.window?.bringSubview(toFront: launchImageView!)
         
         return true
     }
-
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

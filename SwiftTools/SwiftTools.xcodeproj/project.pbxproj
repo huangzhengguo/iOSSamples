@@ -34,6 +34,9 @@
 		8F9D15251FB585E7005F1D1A /* ColorCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D15231FB585E7005F1D1A /* ColorCircleViewController.swift */; };
 		8F9D15261FB585E7005F1D1A /* ColorCircleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9D15241FB585E7005F1D1A /* ColorCircleViewController.xib */; };
 		8F9D15281FB59A9B005F1D1A /* ColorCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D15271FB59A9B005F1D1A /* ColorCircleView.swift */; };
+		8FE621301FCCF9AE0035ED1D /* launch1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6212F1FCCF9AD0035ED1D /* launch1.png */; };
+		8FE621321FCCFAB10035ED1D /* launch3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE621311FCCFAB10035ED1D /* launch3.png */; };
+		8FE621341FCD040F0035ED1D /* launch2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FE621331FCD040F0035ED1D /* launch2.png */; };
 		9A684AA63D6056399DFAAB4A /* Pods_SwiftToolsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A0AC613B90E0CE9D30F76 /* Pods_SwiftToolsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +97,9 @@
 		8F9D15231FB585E7005F1D1A /* ColorCircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircleViewController.swift; sourceTree = "<group>"; };
 		8F9D15241FB585E7005F1D1A /* ColorCircleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCircleViewController.xib; sourceTree = "<group>"; };
 		8F9D15271FB59A9B005F1D1A /* ColorCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircleView.swift; sourceTree = "<group>"; };
+		8FE6212F1FCCF9AD0035ED1D /* launch1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch1.png; sourceTree = "<group>"; };
+		8FE621311FCCFAB10035ED1D /* launch3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch3.png; sourceTree = "<group>"; };
+		8FE621331FCD040F0035ED1D /* launch2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch2.png; sourceTree = "<group>"; };
 		AEAD74B0B725E76001F3F2D0 /* Pods_SwiftTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -224,6 +230,9 @@
 				8F9D15221FB58590005F1D1A /* ColorCircle */,
 				8F8AB66D1FA17E350049D7F1 /* ManualAutoSwitchView.swift */,
 				8F4C88661FA1A99200C8D37D /* SystemInfoTools.swift */,
+				8FE621311FCCFAB10035ED1D /* launch3.png */,
+				8FE621331FCD040F0035ED1D /* launch2.png */,
+				8FE6212F1FCCF9AD0035ED1D /* launch1.png */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -367,9 +376,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE621301FCCF9AE0035ED1D /* launch1.png in Resources */,
+				8FE621341FCD040F0035ED1D /* launch2.png in Resources */,
 				8F7F4F231FBA98D600C20E33 /* DataCoreExampleViewController.xib in Resources */,
 				8F8AB6491FA17DFD0049D7F1 /* LaunchScreen.storyboard in Resources */,
 				8F8AB6461FA17DFD0049D7F1 /* Assets.xcassets in Resources */,
+				8FE621321FCCFAB10035ED1D /* launch3.png in Resources */,
 				8F9D15261FB585E7005F1D1A /* ColorCircleViewController.xib in Resources */,
 				8F8AB6411FA17DFD0049D7F1 /* Main.storyboard in Resources */,
 				8F7F4F1B1FBA7DB700C20E33 /* StockViewController.xib in Resources */,
@@ -730,6 +742,7 @@
 			baseConfigurationReference = 6AA33271DDE5F108FDD17893 /* Pods-SwiftTools.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VS9QL3ZC89;
 				INFOPLIST_FILE = SwiftTools/Info.plist;
@@ -746,6 +759,7 @@
 			baseConfigurationReference = 61F71D071158888E98C96389 /* Pods-SwiftTools.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VS9QL3ZC89;
 				INFOPLIST_FILE = SwiftTools/Info.plist;

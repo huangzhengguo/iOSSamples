@@ -8,6 +8,7 @@
 
 import Foundation
 
+/*
 print("Hello, World!")
 
 let maximumNumberOfLoginAttempts = 10
@@ -189,6 +190,325 @@ class Starship: FullyNamed {
 
 var ncc1701 = Starship(name: "Enterprise", prefix: "USS") // ncc1701.fullname is "USS Enterprise"
 print(ncc1701.fullName)
+
+class DataImporter {
+    /*
+     DataImporter is a class to import data from external file.
+     The class is assumed to take a non-trivial amount of time to initialize.
+     */
+    var filename = "data.txt"
+    
+    // The DataImporter class would provide data importing functionality here.
+}
+
+class DataManager {
+    lazy var importer = DataImporter()
+    var data = [String]()
+    
+    // The DataManager would provide data manager functionality here.
+    
+}
+
+let manager = DataManager()
+
+manager.data.append("Some data")
+manager.data.append("Some more data")
+// the DataImporter instance for the importer has not yet been created
+
+print(manager.importer.filename)
+// the DataImporter instance for the importer property has not been created
+// Prints "data.txt"
+
+struct Point {
+    var x = 0.0, y = 0.0
+}
+
+struct Size {
+    var width = 0.0, height = 0.0
+}
+
+struct Rect {
+    var origin = Point()
+    var size = Size()
+    
+    var center: Point {
+        get {
+            let centerX = origin.x + size.width / 2.0
+            let centerY = origin.y + size.height / 2.0
+            
+            return Point(x: centerX, y: centerY)
+        }
+        
+        set(newCenter) {
+            origin.x = newCenter.x - size.width / 2.0
+            origin.y = newCenter.y - size.height / 2.0
+        }
+    }
+}
+
+var square = Rect(origin: Point(x: 0.0, y: 0.0), size: Size(width: 10.0, height: 10.0))
+var initialSquareCenter = square.center
+
+square.center = Point(x: 15.0, y: 15.0)
+print("square.origin is now at(\(square.origin.x), \(square.origin.y))")
+
+struct Cuboid {
+    var width = 0.0, height = 0.0, depth = 0.0
+    var volume: Double {
+        return width * height * depth
+    }
+}
+
+ 
+class StepCounter {
+    var totalSteps: Int = 0 {
+        willSet(newTotalSteps) {
+            print("About to set totalSteps to \(newTotalSteps)")
+        }
+        
+        didSet {
+            if totalSteps > oldValue {
+                print("Add \(totalSteps - oldValue) steps.")
+            }
+        }
+    }
+}
+
+let stepCounter = StepCounter()
+
+stepCounter.totalSteps = 200
+stepCounter.totalSteps = 200
+stepCounter.totalSteps = 360
+stepCounter.totalSteps = 890
+
+struct SomeStruct {
+    static var storedTypeProperty = "some values."
+    static var computedTypeProperty: Int {
+        return 1
+    }
+}
+
+enum SomeEnumeration {
+    static var storedTypeProperty = "some values."
+    static var computedTypeProperty: Int {
+        return 6
+    }
+}
+
+class SomeClass {
+    static var storedTypeProperty = "some values."
+    static var computedTypeProperty: Int {
+        return 27
+    }
+    
+    class var overrideableComputedTypeProperty: Int {
+        return 107
+    }
+}
+
+print(SomeStruct.storedTypeProperty)
+SomeStruct.storedTypeProperty = "Another value."
+print(SomeStruct.storedTypeProperty)
+print(SomeEnumeration.computedTypeProperty)
+print(SomeClass.computedTypeProperty)
+
+
+struct AudioChannel {
+    static let thresholdLevel = 10
+    static var maxInputLevelForAllChannels = 0
+    
+    var currentLevel: Int = 0 {
+        didSet {
+            if currentLevel > AudioChannel.thresholdLevel {
+                // cap the new audio level to the thresholdLevel
+                currentLevel = AudioChannel.thresholdLevel
+            }
+            
+            if currentLevel > AudioChannel.maxInputLevelForAllChannels {
+                AudioChannel.maxInputLevelForAllChannels = currentLevel
+            }
+        }
+    }
+}
+
+var leftChannel = AudioChannel()
+var rightChannel = AudioChannel()
+
+leftChannel.currentLevel = 7
+print(leftChannel.currentLevel)
+
+print(AudioChannel.maxInputLevelForAllChannels)
+
+rightChannel.currentLevel = 11
+print(rightChannel.currentLevel)
+
+print(AudioChannel.maxInputLevelForAllChannels)
+
+func add() {
+    print("add func")
+}
+
+add()
+
+class Counter {
+    var count = 0
+    func increment() {
+        count += 1
+    }
+    
+    func increment(by amount: Int) {
+        count += amount
+    }
+    
+    func reset() {
+        count = 0
+    }
+}
+
+let counter = Counter()
+
+counter.increment()
+counter.increment(by: 5)
+counter.reset()
+
+
+struct Point {
+    var x = 0.0, y = 0.0
+    mutating func moveBy(x deltaX: Double, y deltaY: Double) {
+        self = Point(x: x + deltaX, y: y + deltaY)
+    }
+}
+
+var somePoint = Point(x: 1.0, y: 1.0)
+
+somePoint.moveBy(x: 2.0, y: 2.0)
+print("The point is now at(\(somePoint.x),\(somePoint.y))")
+
+
+enum TriStateSwitch {
+    case off, low, high
+    mutating func next() {
+        switch self {
+        case .off:
+            self = .low
+        case .low:
+            self = .high
+        case .high:
+            self = .off
+        }
+    }
+}
+
+var ovenLight = TriStateSwitch.high
+
+ovenLight.next()
+
+ovenLight.next()
+*/
+
+struct LevelTracker {
+    static var highestUnlockedLevel = 1
+    var currentLevel = 1
+    
+    static func unlock(_ level: Int) {
+        if level > highestUnlockedLevel {
+            highestUnlockedLevel = level
+        }
+    }
+    
+    static func isUnlocked(_ level: Int) -> Bool {
+        return level < highestUnlockedLevel
+    }
+    
+    @discardableResult
+    mutating func advance(to level: Int) -> Bool {
+        if LevelTracker.isUnlocked(level) {
+            currentLevel = level
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
+class Player {
+    var tracker = LevelTracker()
+    let playerName: String
+    
+    init(name: String) {
+        playerName = name
+    }
+    
+    func complete(level: Int) {
+        LevelTracker.unlock(level + 1)
+        tracker.advance(to: level + 1)
+    }
+}
+
+
+var player = Player(name: "Argyrios")
+
+player.complete(level: 1)
+
+print("highest unlock level is now \(LevelTracker.highestUnlockedLevel)")
+
+
+var player1 = Player(name: "Beto")
+if player1.tracker.advance(to: 6) {
+    print("player1 is now at level 6")
+} else {
+    print("level 6 has not yet been unlocked")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

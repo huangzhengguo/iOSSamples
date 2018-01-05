@@ -404,9 +404,11 @@ var ovenLight = TriStateSwitch.high
 ovenLight.next()
 
 ovenLight.next()
-*/
 
+
+// 类方法使用关键字static和class标识，class标识的类方法子类可以继承重写
 struct LevelTracker {
+    // 类属性
     static var highestUnlockedLevel = 1
     var currentLevel = 1
     
@@ -462,47 +464,323 @@ if player1.tracker.advance(to: 6) {
 
 
 
+func swapTwoInts(_ a: inout Int, _ b: inout Int) {
+    let temporary = a
+    a = b
+    b = temporary
+}
+
+var someInt = 10
+var anotherInt = 20
+
+swapTwoInts(&someInt, &anotherInt)
+
+print("someInt is now \(someInt), anotherInt is now \(anotherInt)")
+
+func swapTwoValues<T>(_ a: inout T, _ b: inout T) {
+    let temporary = a
+    a = b
+    b = temporary
+}
+
+swapTwoValues(&someInt, &anotherInt)
+print("someInt is now \(someInt), anotherInt is now \(anotherInt)")
+
+var someString = "hello"
+var anotherString = "world"
+swapTwoValues(&someString, &anotherString)
+print("someString is now \(someString), anotherString is now \(anotherString)")
+
+swap(&someString, &anotherString)
+print("someString is now \(someString), anotherString is now \(anotherString)")
+ 
+
+struct IntStack {
+    var items = [Int]()
+    
+    mutating func push(_ item: Int) {
+        items.append(item)
+    }
+    
+    mutating func pop() -> Int {
+        // 移除最后一个元素，并且返回移除的元素
+        return items.removeLast()
+    }
+}
+
+struct Stack<Element> {
+    var items = [Element]()
+    
+    mutating func push(_ item: Element) {
+        items.append(item)
+    }
+    
+    mutating func pop() -> Element {
+        return items.removeLast()
+    }
+}
+
+var stackOfString = Stack<String>()
+
+stackOfString.push("Hello")
+stackOfString.push("world")
+stackOfString.push("!")
+
+print("stack top is \(stackOfString.pop())")
+
+extension Stack {
+    var topItem: Element? {
+        return items.isEmpty ? nil : items[items.count - 1]
+    }
+}
+
+if let topItem = stackOfString.topItem {
+    print("The top item on the stack is \(topItem).")
+}
+ 
 
 
+func findIndex(ofString valueToFind: String, in array: [String]) ->Int? {
+    for (index, value) in array.enumerated() {
+        if value == valueToFind {
+            return index
+        }
+    }
+    
+    return nil
+}
+
+let strings = ["cat", "dog", "llama", "parakeet", "terrapin"]
+
+if let foundIndex = findIndex(ofString: "parakeet", in: strings) {
+    print("The index of parakeet is \(foundIndex)")
+}
+
+func findIndex<T: Equatable>(of valueToFind: T, in array: [T]) -> Int? {
+    for (index, value) in array.enumerated() {
+        if value == valueToFind {
+            return index
+        }
+    }
+    
+    return nil
+}
 
 
+protocol Container {
+    associatedtype Item
+    mutating func append(_ item: Item)
+    var count: Int { get }
+    subscript(i: Int) -> Item{ get }
+}
+
+struct IntStack: Container {
+    // original IntStack implementation
+    var items = [Int]()
+    
+    mutating func push(_ item: Int) {
+        items.append(item)
+    }
+    
+    mutating func pop() -> Int {
+        return items.removeLast()
+    }
+    
+    // conformance to the Container protocol
+    typealias Item = Int
+    mutating func append(_ item: Int) {
+        self.push(item)
+    }
+    
+    var count: Int {
+        return items.count
+    }
+    
+    subscript(i: Int) -> Int {
+        return items[i]
+    }
+}
 
 
+protocol SomeProtocol {
+    var mustBeSettable: Int { get set }
+    var doesNotNeedToBeSettable: Int { get set }
+}
+
+protocol AnotherProtocol {
+    static var someTypeProperty: Int { get set }
+}
+
+protocol FullNamed {
+    var fullName: String { get }
+}
+
+struct Person: FullNamed {
+    var fullName: String
+}
+
+let john = Person(fullName: "John Appleseed")
+
+class Starship: FullNamed {
+    var prefix: String?
+    var name: String
+    
+    init(name: String, prefix: String? = nil) {
+        self.name = name
+        self.prefix = prefix
+    }
+    
+    var fullName: String {
+        return (prefix != nil ? prefix! + " " : "") + name
+    }
+}
+
+// 随机数协议
+protocol RandomNumberGenerator {
+    func random() -> Double
+}
+
+class LinearCongruentialGenerator: RandomNumberGenerator {
+    var lastRandom = 42.0
+    let m = 139968.0
+    let a = 3877.0
+    let c = 29573.0
+    
+    func random() -> Double {
+        lastRandom = (lastRandom * a + c).truncatingRemainder(dividingBy: m)
+        
+        return lastRandom / m
+    }
+}
+
+let generator = LinearCongruentialGenerator()
+
+print("Here is a random number: \(generator.random())")
+print("And another one: \(generator.random())")
+
+protocol Togglable {
+    mutating func toggle()
+}
+
+enum OnOffSwitch: Togglable {
+    case off, on
+    
+    mutating func toggle() {
+        switch self {
+        case .off:
+            self = .on
+        case .on:
+            self = .off
+        }
+    }
+}
+
+var lightSwitch = OnOffSwitch.off
+
+lightSwitch.toggle()
+
+*/
+protocol RandomNumberGenerator {
+    func random() -> Double
+}
+
+class LinearCongruentialGenerator: RandomNumberGenerator {
+    var lastRandom = 42.0
+    let m = 139968.0
+    let a = 3877.0
+    let c = 29573.0
+    
+    func random() -> Double {
+        lastRandom = (lastRandom * a + c).truncatingRemainder(dividingBy: m)
+        
+        return lastRandom / m
+    }
+}
+
+class Dice {
+    let sides: Int
+    let generator: RandomNumberGenerator
+    
+    init(sides: Int, generator: RandomNumberGenerator) {
+        self.sides = sides
+        self.generator = generator
+    }
+    
+    func roll() -> Int {
+        return Int(generator.random() * Double(sides)) + 1
+    }
+}
+
+var d6 = Dice(sides: 6, generator: LinearCongruentialGenerator())
+
+//for _ in 1...5 {
+//    print("Random dice roll is \(d6.roll())")
+//}
+
+protocol DiceGame {
+    var dice: Dice { get }
+    func play()
+}
+
+protocol DiceGameDelegate {
+    func gameDidStart(_ game: DiceGame)
+    func game(_ game: DiceGame, didStartNewTurnWithDiceRoll diceRoll: Int)
+    func gameDidEnd(_ game: DiceGame)
+}
+
+class SnakesAndLadders: DiceGame {
+    let finalSquare = 25
+    let dice: Dice = Dice(sides: 6, generator: LinearCongruentialGenerator())
+    
+    var square = 0
+    var board: [Int]
+    
+    init() {
+        board = Array(repeating: 0, count: finalSquare + 1)
+        board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+        board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
+    }
+    
+    var delegate: DiceGameDelegate?
+    
+    func play() {
+        square = 0
+        delegate?.gameDidStart(self)
+        gameLoop: while square != finalSquare {
+            let diceRoll = dice.roll()
+            delegate?.game(self, didStartNewTurnWithDiceRoll: diceRoll)
+            switch square + diceRoll {
+            case finalSquare:
+                break gameLoop
+            case let newSquare where newSquare > finalSquare:
+                continue gameLoop
+            default:
+                square += diceRoll
+                square += board[square]
+            }
+        }
+        delegate?.gameDidEnd(self)
+    }
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+class DiceGameTracker: DiceGameDelegate {
+    var numberOfTurns = 0
+    func gameDidStart(_ game: DiceGame) {
+        numberOfTurns = 0
+        if game is SnakesAndLadders {
+            print("Started a new game of Snakes and Ladders")
+        }
+        print("The game is using a \(game.dice.sides)-sided dice")
+    }
+    func game(_ game: DiceGame, didStartNewTurnWithDiceRoll diceRoll: Int) {
+        numberOfTurns += 1
+        print("Rolled a \(diceRoll)")
+    }
+    func gameDidEnd(_ game: DiceGame) {
+        print("The game lasted for \(numberOfTurns) turns")
+    }
+}
 
 
 

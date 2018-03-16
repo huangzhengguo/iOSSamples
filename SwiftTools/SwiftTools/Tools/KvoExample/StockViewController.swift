@@ -9,28 +9,33 @@
 import UIKit
 
 class StockViewController: UIViewController {
-    let stockModel: StockModel! = StockModel()
+    var stockModel: StockModel!
     let myLabel = UILabel(frame: CGRect(x: 100, y: 100, width: 100, height: 30))
-    let myButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
-    var stockPrice = 0
+    let myButton = UIButton(frame: CGRect(x: UIScreen.main.bounds.width / 2.0 - 50, y: 300, width: 100, height: 30))
+    var stockOb: NSKeyValueObservation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        stockModel.setValue("searph", forKey: "stockName")
-        stockModel.setValue(10.12, forKey: "stockPrice")
-        stockModel.addObserver(self, forKeyPath: "stockPrice", options: [.new, .old], context: nil)
+        myButton.setTitle("增加", for: .normal)
+        myButton.backgroundColor = UIColor.gray
+        myButton.addTarget(self, action: #selector(myButtonAction), for: .touchUpInside)
         
-        myLabel.textColor = UIColor.red
-        myLabel.text = stockModel.value(forKey: "stockPrice") as? String
         self.view.addSubview(myLabel)
+        self.view.addSubview(myButton)
         
-        myButton.addTarget(self, action: #selector(myButtonAction(sender:)), for: .touchUpInside)
+        // Do any additional setup after loading the view.
+        stockModel = StockModel(stockName: "searph", stockPrice: 10.12)
+        
+        myLabel.text = String.init(stockModel.stockPrice)
+        // 键值观察者模式，监听模型属性值变化
+        stockOb = stockModel.observe(\ StockModel.stockPrice) { (s, value) in
+            self.myLabel.text = String.init(describing: s.stockPrice)
+        }
     }
 
     @objc func myButtonAction(sender: UIButton) -> Void {
-        stockModel.setValue(stockPrice + 1, forKey: "stockPrice")
+        stockModel.stockPrice = stockModel.stockPrice + 1
     }
     
     override func didReceiveMemoryWarning() {

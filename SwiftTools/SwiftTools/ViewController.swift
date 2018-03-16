@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    let toolsTitleArray = ["圆形调光", "KVO", "Coredata"]
+    let toolsTitleArray = ["圆形调光", "KVO", "Coredata", "MVVM", "BlueTooth"]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -51,19 +51,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController: UIViewController
         if indexPath.row == 0 {
-            let colorCircleViewController = ColorCircleViewController(nibName: "ColorCircleViewController", bundle: nil)
-            
-            self.navigationController?.pushViewController(colorCircleViewController, animated: true)
+            viewController = ColorCircleViewController(nibName: "ColorCircleViewController", bundle: nil)
         } else if indexPath.row == 1 {
-            let stockViewController = StockViewController(nibName: "StockViewController", bundle: nil)
-            
-            self.navigationController?.pushViewController(stockViewController, animated: true)
+            viewController = StockViewController(nibName: "StockViewController", bundle: nil)
         } else if indexPath.row == 2 {
-            let dataCoreExampleViewController = DataCoreExampleViewController(nibName: "DataCoreExampleViewController", bundle: nil)
-            
-            self.navigationController?.pushViewController(dataCoreExampleViewController, animated: true)
+            viewController = DataCoreExampleViewController(nibName: "DataCoreExampleViewController", bundle: nil)
+        } else if indexPath.row == 3 {
+            viewController = MvvmViewController(nibName: "MvvmViewController", bundle: nil)
+        } else {
+            viewController = BlueToothViewController(nibName: "BlueToothViewController", bundle: nil)
         }
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

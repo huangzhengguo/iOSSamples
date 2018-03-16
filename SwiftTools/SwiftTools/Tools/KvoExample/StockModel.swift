@@ -8,6 +8,11 @@
 import Foundation
 
 @objcMembers public class StockModel : NSObject {
-    var stockName: String?
-    var stockPrice: Float?
+    dynamic var stockName: String
+    dynamic var stockPrice: Float
+    
+    public init(stockName: String, stockPrice: Float) {
+        self.stockName = stockName
+        self.stockPrice = stockPrice
+    }
 }

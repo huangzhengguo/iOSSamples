@@ -47,6 +47,11 @@ class BlueToothViewController: UIViewController, CBCentralManagerDelegate, UITab
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         print("发现设备: ", peripheral.name ?? "没有名字")
+        print(RSSI)
+        if (advertisementData.keys.contains("kCBAdvDataManufacturerData")) {
+            print(advertisementData.index(forKey: "kCBAdvDataManufacturerData")!)
+        }
+        
         if (!self.dataSource.contains(peripheral)) {
             self.dataSource.append(peripheral)
         }

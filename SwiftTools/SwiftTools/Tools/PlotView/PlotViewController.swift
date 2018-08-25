@@ -18,11 +18,27 @@ class PlotViewController: UIViewController {
         plotView = PlotView(frame: CGRect(x: 0, y: 84, width: self.view.frame.size.width, height: self.view.frame.size.height / 2.0))
         
         plotView?.backgroundColor = UIColor.gray
-        plotView?.dataPointArray = [
-            [CGPoint(x: 0, y: 0), CGPoint(x: 300, y: 10), CGPoint(x: 600, y: 30), CGPoint(x: 700, y: 20)],
-            [CGPoint(x: 0, y: 0), CGPoint(x: 200, y: 10), CGPoint(x: 700, y: 30), CGPoint(x: 800, y: 20)],
-            [CGPoint(x: 600, y: 0), CGPoint(x: 900, y: 10), CGPoint(x: 1000, y: 30), CGPoint(x: 1000, y: 60)]
-        ]
+        var dataArray1 = [CGPoint]()
+        for i in stride(from: 0, to: 1439, by: 10) {
+            dataArray1.append(CGPoint(x: CGFloat(i), y: CGFloat(arc4random() % 100)))
+        }
+        
+        var dataArray2 = [CGPoint]()
+        for i in stride(from: 0, to: 1439, by: 10) {
+            dataArray2.append(CGPoint(x: CGFloat(i), y: CGFloat(arc4random() % 100)))
+        }
+        
+        var dataArray3 = [CGPoint]()
+        for i in stride(from: 0, to: 1439, by: 10) {
+            dataArray3.append(CGPoint(x: CGFloat(i), y: CGFloat(arc4random() % 100)))
+        }
+        
+        plotView?.dataPointArray = [dataArray1,dataArray2,dataArray3]
+//        plotView?.dataPointArray = [
+//            [CGPoint(x: 0, y: 0), CGPoint(x: 300, y: 10), CGPoint(x: 600, y: 30), CGPoint(x: 700, y: 20)],
+//            [CGPoint(x: 0, y: 0), CGPoint(x: 200, y: 10), CGPoint(x: 700, y: 30), CGPoint(x: 800, y: 20)],
+//            [CGPoint(x: 600, y: 0), CGPoint(x: 900, y: 10), CGPoint(x: 1000, y: 30), CGPoint(x: 1000, y: 60)]
+//        ]
         
         plotView?.lineColorArray = [UIColor.red, UIColor.green, UIColor.blue]
         plotView?.lineColorTitleArray = ["红", "绿", "蓝"]

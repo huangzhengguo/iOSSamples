@@ -11,6 +11,9 @@
 		4A660B21361B869CC7133AD6 /* Pods_SwiftToolsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7929D83AC733AA39732B97E4 /* Pods_SwiftToolsTests.framework */; };
 		8F1B7E182123F65500926A0E /* MultipleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1B7E172123F65500926A0E /* MultipleSlider.swift */; };
 		8F4C88671FA1A99200C8D37D /* SystemInfoTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C88661FA1A99200C8D37D /* SystemInfoTools.swift */; };
+		8F638CEA213FE09F00D69C4F /* CircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F638CE9213FE09F00D69C4F /* CircleSlider.swift */; };
+		8F638CED213FE31400D69C4F /* CircleSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F638CEB213FE31400D69C4F /* CircleSliderViewController.swift */; };
+		8F638CEE213FE31400D69C4F /* CircleSliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F638CEC213FE31400D69C4F /* CircleSliderViewController.xib */; };
 		8F7F4F171FBA7D1300C20E33 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7F4F161FBA7D1300C20E33 /* StockModel.swift */; };
 		8F7F4F1A1FBA7DB700C20E33 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7F4F181FBA7DB700C20E33 /* StockViewController.swift */; };
 		8F7F4F1B1FBA7DB700C20E33 /* StockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7F4F191FBA7DB700C20E33 /* StockViewController.xib */; };
@@ -78,6 +81,9 @@
 		7929D83AC733AA39732B97E4 /* Pods_SwiftToolsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftToolsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F1B7E172123F65500926A0E /* MultipleSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSlider.swift; sourceTree = "<group>"; };
 		8F4C88661FA1A99200C8D37D /* SystemInfoTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemInfoTools.swift; sourceTree = "<group>"; };
+		8F638CE9213FE09F00D69C4F /* CircleSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSlider.swift; sourceTree = "<group>"; };
+		8F638CEB213FE31400D69C4F /* CircleSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSliderViewController.swift; sourceTree = "<group>"; };
+		8F638CEC213FE31400D69C4F /* CircleSliderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleSliderViewController.xib; sourceTree = "<group>"; };
 		8F7F4F161FBA7D1300C20E33 /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
 		8F7F4F181FBA7DB700C20E33 /* StockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
 		8F7F4F191FBA7DB700C20E33 /* StockViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockViewController.xib; sourceTree = "<group>"; };
@@ -169,6 +175,23 @@
 			path = CustomerSlider;
 			sourceTree = "<group>";
 		};
+		8F545429213F63CA006E0322 /* AlertController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AlertController;
+			sourceTree = "<group>";
+		};
+		8F638CE8213FE07100D69C4F /* CircleSlider */ = {
+			isa = PBXGroup;
+			children = (
+				8F638CE9213FE09F00D69C4F /* CircleSlider.swift */,
+				8F638CEB213FE31400D69C4F /* CircleSliderViewController.swift */,
+				8F638CEC213FE31400D69C4F /* CircleSliderViewController.xib */,
+			);
+			path = CircleSlider;
+			sourceTree = "<group>";
+		};
 		8F7F4F151FBA7C9D00C20E33 /* KvoExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +276,8 @@
 		8F8AB66C1FA17E1B0049D7F1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				8F638CE8213FE07100D69C4F /* CircleSlider */,
+				8F545429213F63CA006E0322 /* AlertController */,
 				8F8DCBF22126DA6D00A94CC4 /* PlotView */,
 				8F1B7E162123F60200926A0E /* CustomerSlider */,
 				8F9F86F1205BAC1300608B7E /* BuleTooth */,
@@ -449,6 +474,7 @@
 				8F9D15261FB585E7005F1D1A /* ColorCircleViewController.xib in Resources */,
 				8F8AB6411FA17DFD0049D7F1 /* Main.storyboard in Resources */,
 				8F9F86F5205BAC6900608B7E /* BlueToothViewController.xib in Resources */,
+				8F638CEE213FE31400D69C4F /* CircleSliderViewController.xib in Resources */,
 				8F7F4F1B1FBA7DB700C20E33 /* StockViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,6 +657,7 @@
 				8F7F4F251FBA997A00C20E33 /* DatabaseManager.swift in Sources */,
 				8F4C88671FA1A99200C8D37D /* SystemInfoTools.swift in Sources */,
 				8F7F4F421FBAB87C00C20E33 /* Group+CoreDataClass.swift in Sources */,
+				8F638CEA213FE09F00D69C4F /* CircleSlider.swift in Sources */,
 				8F7F4F221FBA98D600C20E33 /* DataCoreExampleViewController.swift in Sources */,
 				8F7F4F171FBA7D1300C20E33 /* StockModel.swift in Sources */,
 				8F8AB66E1FA17E350049D7F1 /* ManualAutoSwitchView.swift in Sources */,
@@ -641,6 +668,7 @@
 				8F9D15251FB585E7005F1D1A /* ColorCircleViewController.swift in Sources */,
 				8F7F4F441FBAB87C00C20E33 /* Device+CoreDataClass.swift in Sources */,
 				8F7F4F401FBAB87C00C20E33 /* Brand+CoreDataClass.swift in Sources */,
+				8F638CED213FE31400D69C4F /* CircleSliderViewController.swift in Sources */,
 				8F7F4F411FBAB87C00C20E33 /* Brand+CoreDataProperties.swift in Sources */,
 				8F8AB63E1FA17DFD0049D7F1 /* ViewController.swift in Sources */,
 				8F8AB63C1FA17DFD0049D7F1 /* AppDelegate.swift in Sources */,

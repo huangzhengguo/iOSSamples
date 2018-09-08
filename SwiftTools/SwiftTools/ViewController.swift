@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    let toolsTitleArray = ["圆形调光", "KVO", "Coredata", "MVVM", "BlueTooth" ,"曲线图"]
+    let toolsTitleArray = ["圆形调光", "KVO", "Coredata", "MVVM", "BlueTooth" ,"曲线图", "CircleSlider"]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -62,8 +62,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             viewController = MvvmViewController(nibName: "MvvmViewController", bundle: nil)
         } else if indexPath.row == 4 {
             viewController = BlueToothViewController(nibName: "BlueToothViewController", bundle: nil)
-        } else {
+        } else if indexPath.row == 5 {
             viewController = PlotViewController(nibName: "PlotViewController", bundle: nil)
+        } else {
+            viewController = CircleSliderViewController(nibName: "CircleSliderViewController", bundle: nil)
         }
         
         self.navigationController?.pushViewController(viewController, animated: true)

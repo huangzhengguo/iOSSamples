@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    let toolsTitleArray = ["圆形调光", "KVO", "Coredata", "MVVM", "BlueTooth" ,"曲线图", "CircleSlider"]
+    let toolsTitleArray = ["圆形调光", "KVO", "Coredata", "MVVM", "BlueTooth" ,"曲线图", "CircleSlider", "ConstraintToMargin", "UIPresentationController"]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -64,15 +64,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             viewController = BlueToothViewController(nibName: "BlueToothViewController", bundle: nil)
         } else if indexPath.row == 5 {
             viewController = PlotViewController(nibName: "PlotViewController", bundle: nil)
-        } else {
+        } else if indexPath.row == 6 {
             viewController = CircleSliderViewController(nibName: "CircleSliderViewController", bundle: nil)
+        } else if indexPath.row == 7 {
+            viewController = ConstraintToMarginViewController(nibName: "ConstraintToMarginViewController", bundle: nil)
+        } else {
+            viewController = ModalViewController(nibName: "ModalViewController", bundle: nil)
         }
         
         self.navigationController?.pushViewController(viewController, animated: true)
-    }
-    
-    override func prefersHomeIndicatorAutoHidden() -> Bool {
-        return true;
     }
     
     override func didReceiveMemoryWarning() {

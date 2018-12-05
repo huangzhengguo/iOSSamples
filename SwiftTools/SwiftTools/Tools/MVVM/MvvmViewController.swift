@@ -33,10 +33,6 @@ class MvvmViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prefersHomeIndicatorAutoHidden() -> Bool {
-        return true;
-    }
-    
     /*
     // MARK: - Navigation
 

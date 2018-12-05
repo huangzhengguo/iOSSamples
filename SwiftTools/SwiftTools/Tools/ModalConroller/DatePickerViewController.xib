@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerViewController" customModule="SwiftTools" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelBtn" destination="YHZ-Hh-jhf" id="2y1-Yn-O2F"/>
+                <outlet property="datePicker" destination="ErI-xv-vz6" id="x9o-NG-4je"/>
+                <outlet property="messageLabel" destination="x3m-ou-z6d" id="r1X-Ef-Ll4"/>
+                <outlet property="saveBtn" destination="xoa-tc-EQY" id="7Hg-Rc-TUI"/>
+                <outlet property="titleLabel" destination="6KB-qG-2vf" id="GG4-or-9LO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHZ-Hh-jhf">
+                    <rect key="frame" x="0.0" y="617" width="187.5" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="way-hG-Yt0"/>
+                    </constraints>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="cancelBtnAction:" destination="-1" eventType="touchUpInside" id="VgL-uY-OfF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoa-tc-EQY">
+                    <rect key="frame" x="187.5" y="617" width="187.5" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="zce-F7-BCS"/>
+                    </constraints>
+                    <state key="normal" title="Save"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KB-qG-2vf">
+                    <rect key="frame" x="16" y="36" width="343" height="23"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3m-ou-z6d">
+                    <rect key="frame" x="0.0" y="67" width="375" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ErI-xv-vz6">
+                    <rect key="frame" x="0.0" y="88" width="375" height="529"/>
+                    <date key="date" timeIntervalSinceReferenceDate="565683305.06806898">
+                        <!--2018-12-05 06:15:05 +0000-->
+                    </date>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YHZ-Hh-jhf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="36W-1n-xQ1"/>
+                <constraint firstItem="ErI-xv-vz6" firstAttribute="top" secondItem="x3m-ou-z6d" secondAttribute="bottom" id="6Ow-2E-rLy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="x3m-ou-z6d" secondAttribute="trailing" id="F45-Rc-Tqy"/>
+                <constraint firstItem="xoa-tc-EQY" firstAttribute="width" secondItem="YHZ-Hh-jhf" secondAttribute="width" id="Gh3-H0-WCs"/>
+                <constraint firstItem="x3m-ou-z6d" firstAttribute="top" secondItem="6KB-qG-2vf" secondAttribute="bottom" constant="8" id="Jk5-uK-xPw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6KB-qG-2vf" secondAttribute="trailing" constant="16" id="MYQ-3p-J5t"/>
+                <constraint firstItem="6KB-qG-2vf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="Tkg-P9-lbS"/>
+                <constraint firstItem="xoa-tc-EQY" firstAttribute="leading" secondItem="YHZ-Hh-jhf" secondAttribute="trailing" id="Wrv-wd-eGy"/>
+                <constraint firstItem="ErI-xv-vz6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XFq-VX-bgI"/>
+                <constraint firstItem="x3m-ou-z6d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Zq8-Zj-9U3"/>
+                <constraint firstAttribute="bottom" secondItem="xoa-tc-EQY" secondAttribute="bottom" id="ZzU-rM-fLT"/>
+                <constraint firstItem="6KB-qG-2vf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aAB-NV-2Qn"/>
+                <constraint firstItem="YHZ-Hh-jhf" firstAttribute="top" secondItem="ErI-xv-vz6" secondAttribute="bottom" id="f3G-hQ-MIz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xoa-tc-EQY" secondAttribute="trailing" id="gLX-y0-IcY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YHZ-Hh-jhf" secondAttribute="bottom" id="hvV-pM-WDe"/>
+                <constraint firstItem="ErI-xv-vz6" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="syw-Tb-eBR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="313" y="-104"/>
+        </view>
+    </objects>
+</document>

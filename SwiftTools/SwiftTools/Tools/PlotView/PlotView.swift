@@ -101,7 +101,7 @@ class PlotView: UIView {
             let label = UILabel(frame: CGRect(x: self.leftPadding + i * xUnit - 10, y: self.frame.size.height - 30, width: self.frame.size.width / 5, height: 20))
             
             label.font = UIFont.boldSystemFont(ofSize: 10)
-            label.text = String.init(format: "%@", String.convertMinuteToFormatTimeStr(minutes: Int(i)))
+            // label.text = String.init(format: "%@", String.convertMinuteToFormatTimeStr(minutes: Int(i)))
             label.textColor = UIColor.white
             
             self.addSubview(label)
@@ -132,7 +132,7 @@ class PlotView: UIView {
             
             self.addSubview(titleLabel)
             
-            colorSize = CGSize(width: String.getStringSize(str: titleLabel.text! as NSString, font: titleLabel.font, maxSize: CGSize(width: 300, height: 10)).width, height: 10.0)
+            // colorSize = CGSize(width: String.getStringSize(str: titleLabel.text! as NSString, font: titleLabel.font, maxSize: CGSize(width: 300, height: 10)).width, height: 10.0)
             
             colorLableWidth = colorLableWidth + colorSize.width
             print("colorSize.width = \(colorSize.width)")

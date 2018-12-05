@@ -61,7 +61,7 @@ class ColorCircleView: UIView {
                 progressView?.center = CGPoint(x: UIScreen.main.bounds.width / 2, y: (progressView?.center.y)!)
             }
             
-            progressView?.addTarget(self, action: #selector(colorValueChanged(view:)), for: UIControlEvents.valueChanged)
+            progressView?.addTarget(self, action: #selector(colorValueChanged(view:)), for: UIControl.Event.valueChanged)
             
             progressViewArray?.append(progressView!)
             self.addSubview(progressView!)

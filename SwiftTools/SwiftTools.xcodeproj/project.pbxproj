@@ -38,11 +38,20 @@
 		8F8DCBF42126DA9B00A94CC4 /* PlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8DCBF32126DA9B00A94CC4 /* PlotView.swift */; };
 		8F8DCBF72126DAB500A94CC4 /* PlotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8DCBF52126DAB500A94CC4 /* PlotViewController.swift */; };
 		8F8DCBF82126DAB500A94CC4 /* PlotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F8DCBF62126DAB500A94CC4 /* PlotViewController.xib */; };
+		8F954B0321B4CEFB0072AC6E /* ConstraintToMarginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F954B0121B4CEFB0072AC6E /* ConstraintToMarginViewController.swift */; };
+		8F954B0421B4CEFB0072AC6E /* ConstraintToMarginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F954B0221B4CEFB0072AC6E /* ConstraintToMarginViewController.xib */; };
+		8F954B0721B4DF0E0072AC6E /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F954B0621B4DF0E0072AC6E /* CustomView.swift */; };
+		8F954B0921B4DF1D0072AC6E /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F954B0821B4DF1D0072AC6E /* CustomView.xib */; };
 		8F9D15251FB585E7005F1D1A /* ColorCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D15231FB585E7005F1D1A /* ColorCircleViewController.swift */; };
 		8F9D15261FB585E7005F1D1A /* ColorCircleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9D15241FB585E7005F1D1A /* ColorCircleViewController.xib */; };
 		8F9D15281FB59A9B005F1D1A /* ColorCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D15271FB59A9B005F1D1A /* ColorCircleView.swift */; };
 		8F9F86F4205BAC6900608B7E /* BlueToothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9F86F2205BAC6900608B7E /* BlueToothViewController.swift */; };
 		8F9F86F5205BAC6900608B7E /* BlueToothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9F86F3205BAC6900608B7E /* BlueToothViewController.xib */; };
+		8FA952DE21B66246005F596C /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA952DC21B66246005F596C /* ModalViewController.swift */; };
+		8FA952DF21B66246005F596C /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA952DD21B66246005F596C /* ModalViewController.xib */; };
+		8FA952E121B665FD005F596C /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA952E021B665FD005F596C /* CustomPresentationController.swift */; };
+		8FAB839D21B7A34800CFA9CF /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAB839B21B7A34800CFA9CF /* DatePickerViewController.swift */; };
+		8FAB839E21B7A34800CFA9CF /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAB839C21B7A34800CFA9CF /* DatePickerViewController.xib */; };
 		8FB6FF1D2022EABA005E57F8 /* MvvmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6FF1B2022EABA005E57F8 /* MvvmViewController.swift */; };
 		8FB6FF1E2022EABA005E57F8 /* MvvmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB6FF1C2022EABA005E57F8 /* MvvmViewController.xib */; };
 		8FB6FF202022F3E6005E57F8 /* MvvmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6FF1F2022F3E6005E57F8 /* MvvmModel.swift */; };
@@ -114,11 +123,20 @@
 		8F8DCBF32126DA9B00A94CC4 /* PlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotView.swift; sourceTree = "<group>"; };
 		8F8DCBF52126DAB500A94CC4 /* PlotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotViewController.swift; sourceTree = "<group>"; };
 		8F8DCBF62126DAB500A94CC4 /* PlotViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlotViewController.xib; sourceTree = "<group>"; };
+		8F954B0121B4CEFB0072AC6E /* ConstraintToMarginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintToMarginViewController.swift; sourceTree = "<group>"; };
+		8F954B0221B4CEFB0072AC6E /* ConstraintToMarginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConstraintToMarginViewController.xib; sourceTree = "<group>"; };
+		8F954B0621B4DF0E0072AC6E /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		8F954B0821B4DF1D0072AC6E /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		8F9D15231FB585E7005F1D1A /* ColorCircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircleViewController.swift; sourceTree = "<group>"; };
 		8F9D15241FB585E7005F1D1A /* ColorCircleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCircleViewController.xib; sourceTree = "<group>"; };
 		8F9D15271FB59A9B005F1D1A /* ColorCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircleView.swift; sourceTree = "<group>"; };
 		8F9F86F2205BAC6900608B7E /* BlueToothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueToothViewController.swift; sourceTree = "<group>"; };
 		8F9F86F3205BAC6900608B7E /* BlueToothViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlueToothViewController.xib; sourceTree = "<group>"; };
+		8FA952DC21B66246005F596C /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		8FA952DD21B66246005F596C /* ModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
+		8FA952E021B665FD005F596C /* CustomPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
+		8FAB839B21B7A34800CFA9CF /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		8FAB839C21B7A34800CFA9CF /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
 		8FB6FF1B2022EABA005E57F8 /* MvvmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmViewController.swift; sourceTree = "<group>"; };
 		8FB6FF1C2022EABA005E57F8 /* MvvmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MvvmViewController.xib; sourceTree = "<group>"; };
 		8FB6FF1F2022F3E6005E57F8 /* MvvmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmModel.swift; sourceTree = "<group>"; };
@@ -276,6 +294,9 @@
 		8F8AB66C1FA17E1B0049D7F1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				8FA952DB21B66074005F596C /* ModalConroller */,
+				8F954B0521B4DC320072AC6E /* CustomView */,
+				8F954B0021B4CEBE0072AC6E /* ConstraintToMargin */,
 				8F638CE8213FE07100D69C4F /* CircleSlider */,
 				8F545429213F63CA006E0322 /* AlertController */,
 				8F8DCBF22126DA6D00A94CC4 /* PlotView */,
@@ -304,6 +325,24 @@
 			path = PlotView;
 			sourceTree = "<group>";
 		};
+		8F954B0021B4CEBE0072AC6E /* ConstraintToMargin */ = {
+			isa = PBXGroup;
+			children = (
+				8F954B0121B4CEFB0072AC6E /* ConstraintToMarginViewController.swift */,
+				8F954B0221B4CEFB0072AC6E /* ConstraintToMarginViewController.xib */,
+			);
+			path = ConstraintToMargin;
+			sourceTree = "<group>";
+		};
+		8F954B0521B4DC320072AC6E /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				8F954B0621B4DF0E0072AC6E /* CustomView.swift */,
+				8F954B0821B4DF1D0072AC6E /* CustomView.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		8F9D15221FB58590005F1D1A /* ColorCircle */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +360,18 @@
 				8F9F86F3205BAC6900608B7E /* BlueToothViewController.xib */,
 			);
 			path = BuleTooth;
+			sourceTree = "<group>";
+		};
+		8FA952DB21B66074005F596C /* ModalConroller */ = {
+			isa = PBXGroup;
+			children = (
+				8FA952DC21B66246005F596C /* ModalViewController.swift */,
+				8FA952DD21B66246005F596C /* ModalViewController.xib */,
+				8FA952E021B665FD005F596C /* CustomPresentationController.swift */,
+				8FAB839B21B7A34800CFA9CF /* DatePickerViewController.swift */,
+				8FAB839C21B7A34800CFA9CF /* DatePickerViewController.xib */,
+			);
+			path = ModalConroller;
 			sourceTree = "<group>";
 		};
 		8FB6FF1A2022EA92005E57F8 /* MVVM */ = {
@@ -466,13 +517,17 @@
 				8FB6FF1E2022EABA005E57F8 /* MvvmViewController.xib in Resources */,
 				8FE621301FCCF9AE0035ED1D /* launch1.png in Resources */,
 				8FE621341FCD040F0035ED1D /* launch2.png in Resources */,
+				8FAB839E21B7A34800CFA9CF /* DatePickerViewController.xib in Resources */,
 				8F7F4F231FBA98D600C20E33 /* DataCoreExampleViewController.xib in Resources */,
+				8FA952DF21B66246005F596C /* ModalViewController.xib in Resources */,
 				8F8AB6491FA17DFD0049D7F1 /* LaunchScreen.storyboard in Resources */,
 				8F8DCBF82126DAB500A94CC4 /* PlotViewController.xib in Resources */,
+				8F954B0421B4CEFB0072AC6E /* ConstraintToMarginViewController.xib in Resources */,
 				8F8AB6461FA17DFD0049D7F1 /* Assets.xcassets in Resources */,
 				8FE621321FCCFAB10035ED1D /* launch3.png in Resources */,
 				8F9D15261FB585E7005F1D1A /* ColorCircleViewController.xib in Resources */,
 				8F8AB6411FA17DFD0049D7F1 /* Main.storyboard in Resources */,
+				8F954B0921B4DF1D0072AC6E /* CustomView.xib in Resources */,
 				8F9F86F5205BAC6900608B7E /* BlueToothViewController.xib in Resources */,
 				8F638CEE213FE31400D69C4F /* CircleSliderViewController.xib in Resources */,
 				8F7F4F1B1FBA7DB700C20E33 /* StockViewController.xib in Resources */,
@@ -653,19 +708,24 @@
 				8F9D15281FB59A9B005F1D1A /* ColorCircleView.swift in Sources */,
 				8F8DCBF72126DAB500A94CC4 /* PlotViewController.swift in Sources */,
 				8F7F4F451FBAB87C00C20E33 /* Device+CoreDataProperties.swift in Sources */,
+				8FAB839D21B7A34800CFA9CF /* DatePickerViewController.swift in Sources */,
 				8FB6FF1D2022EABA005E57F8 /* MvvmViewController.swift in Sources */,
 				8F7F4F251FBA997A00C20E33 /* DatabaseManager.swift in Sources */,
+				8F954B0321B4CEFB0072AC6E /* ConstraintToMarginViewController.swift in Sources */,
 				8F4C88671FA1A99200C8D37D /* SystemInfoTools.swift in Sources */,
 				8F7F4F421FBAB87C00C20E33 /* Group+CoreDataClass.swift in Sources */,
+				8FA952E121B665FD005F596C /* CustomPresentationController.swift in Sources */,
 				8F638CEA213FE09F00D69C4F /* CircleSlider.swift in Sources */,
 				8F7F4F221FBA98D600C20E33 /* DataCoreExampleViewController.swift in Sources */,
 				8F7F4F171FBA7D1300C20E33 /* StockModel.swift in Sources */,
+				8FA952DE21B66246005F596C /* ModalViewController.swift in Sources */,
 				8F8AB66E1FA17E350049D7F1 /* ManualAutoSwitchView.swift in Sources */,
 				8F8DCBF42126DA9B00A94CC4 /* PlotView.swift in Sources */,
 				8F7F4F431FBAB87C00C20E33 /* Group+CoreDataProperties.swift in Sources */,
 				8F9F86F4205BAC6900608B7E /* BlueToothViewController.swift in Sources */,
 				8FB6FF222022F3FD005E57F8 /* Person.swift in Sources */,
 				8F9D15251FB585E7005F1D1A /* ColorCircleViewController.swift in Sources */,
+				8F954B0721B4DF0E0072AC6E /* CustomView.swift in Sources */,
 				8F7F4F441FBAB87C00C20E33 /* Device+CoreDataClass.swift in Sources */,
 				8F7F4F401FBAB87C00C20E33 /* Brand+CoreDataClass.swift in Sources */,
 				8F638CED213FE31400D69C4F /* CircleSliderViewController.swift in Sources */,
@@ -849,7 +909,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huang.SwiftTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -866,7 +926,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huang.SwiftTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

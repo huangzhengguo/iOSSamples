@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ModalViewController: UIViewController,UIViewControllerTransitioningDelegate,UIAdaptivePresentationControllerDelegate {
+class ModalViewController: UIViewController,UIViewControllerTransitioningDelegate {
     var datePickerViewController: DatePickerViewController?
     var customPresentationController: CustomPresentationController?
     
@@ -23,12 +23,10 @@ class ModalViewController: UIViewController,UIViewControllerTransitioningDelegat
         // 1.设置ViewController的style
         // 2.设置一个transition代理
         datePickerViewController?.modalPresentationStyle = .custom
-        datePickerViewController?.presentationController?.delegate = self
         datePickerViewController?.transitioningDelegate = self
     }
 
     @IBAction func showPresentationController(_ sender: UIButton) {
-        // plotViewController.setpre
         self.present((datePickerViewController)!, animated: true, completion: nil)
     }
     

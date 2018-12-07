@@ -12,6 +12,14 @@
 		8F76001D1F7B556000C82682 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76001C1F7B556000C82682 /* main.swift */; };
 		8F7809DD20635D4800A02582 /* ProtocolChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7809DC20635D4800A02582 /* ProtocolChapter.swift */; };
 		8F83C9FD1F7E2AC800E7A9DE /* ControlFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F83C9FC1F7E2AC800E7A9DE /* ControlFlow.swift */; };
+		8F9C52AB21BA077D0037B010 /* CustomClassFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C52AA21BA077D0037B010 /* CustomClassFunction.swift */; };
+		8F9C52AD21BA0A460037B010 /* Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C52AC21BA0A460037B010 /* Apartment.swift */; };
+		8F9C52AF21BA12170037B010 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C52AE21BA12170037B010 /* Customer.swift */; };
+		8F9C52B121BA12360037B010 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C52B021BA12360037B010 /* CreditCard.swift */; };
+		8F9C52B321BA16850037B010 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C52B221BA16850037B010 /* Country.swift */; };
+		8F9C52B521BA16B20037B010 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C52B421BA16B20037B010 /* City.swift */; };
+		8F9C52B721BA1C540037B010 /* HTMLElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C52B621BA1C540037B010 /* HTMLElement.swift */; };
+		8FAB83A121B8F65100CFA9CF /* CustomPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAB83A021B8F65100CFA9CF /* CustomPerson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +41,14 @@
 		8F76001C1F7B556000C82682 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8F7809DC20635D4800A02582 /* ProtocolChapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolChapter.swift; sourceTree = "<group>"; };
 		8F83C9FC1F7E2AC800E7A9DE /* ControlFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlFlow.swift; sourceTree = "<group>"; };
+		8F9C52AA21BA077D0037B010 /* CustomClassFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomClassFunction.swift; sourceTree = "<group>"; };
+		8F9C52AC21BA0A460037B010 /* Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apartment.swift; sourceTree = "<group>"; };
+		8F9C52AE21BA12170037B010 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		8F9C52B021BA12360037B010 /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		8F9C52B221BA16850037B010 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		8F9C52B421BA16B20037B010 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		8F9C52B621BA1C540037B010 /* HTMLElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLElement.swift; sourceTree = "<group>"; };
+		8FAB83A021B8F65100CFA9CF /* CustomPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPerson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +97,7 @@
 		8F76001B1F7B556000C82682 /* SwiftLearn */ = {
 			isa = PBXGroup;
 			children = (
+				8FAB839F21B8F63500CFA9CF /* CustomClass */,
 				8F7809DB20635CFB00A02582 /* ProtocolChapter */,
 				8F2345FC205921DE0098F4AB /* InheritanceChapter */,
 				8F2345F9205900100098F4AB /* SubscriptChapter */,
@@ -104,6 +121,21 @@
 				8F83C9FC1F7E2AC800E7A9DE /* ControlFlow.swift */,
 			);
 			path = ControlFlow;
+			sourceTree = "<group>";
+		};
+		8FAB839F21B8F63500CFA9CF /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				8FAB83A021B8F65100CFA9CF /* CustomPerson.swift */,
+				8F9C52AA21BA077D0037B010 /* CustomClassFunction.swift */,
+				8F9C52AC21BA0A460037B010 /* Apartment.swift */,
+				8F9C52AE21BA12170037B010 /* Customer.swift */,
+				8F9C52B021BA12360037B010 /* CreditCard.swift */,
+				8F9C52B221BA16850037B010 /* Country.swift */,
+				8F9C52B421BA16B20037B010 /* City.swift */,
+				8F9C52B621BA1C540037B010 /* HTMLElement.swift */,
+			);
+			path = CustomClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,10 +196,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FAB83A121B8F65100CFA9CF /* CustomPerson.swift in Sources */,
+				8F9C52B721BA1C540037B010 /* HTMLElement.swift in Sources */,
 				8F7809DD20635D4800A02582 /* ProtocolChapter.swift in Sources */,
+				8F9C52B521BA16B20037B010 /* City.swift in Sources */,
 				8F2345FE205922110098F4AB /* InheritanceChapter.swift in Sources */,
 				8F76001D1F7B556000C82682 /* main.swift in Sources */,
 				8F83C9FD1F7E2AC800E7A9DE /* ControlFlow.swift in Sources */,
+				8F9C52AB21BA077D0037B010 /* CustomClassFunction.swift in Sources */,
+				8F9C52B121BA12360037B010 /* CreditCard.swift in Sources */,
+				8F9C52B321BA16850037B010 /* Country.swift in Sources */,
+				8F9C52AF21BA12170037B010 /* Customer.swift in Sources */,
+				8F9C52AD21BA0A460037B010 /* Apartment.swift in Sources */,
 				8F2345FB2059007D0098F4AB /* SubscriptChapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,20 +324,24 @@
 		8F7600211F7B556000C82682 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VS9QL3ZC89;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		8F7600221F7B556000C82682 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VS9QL3ZC89;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

@@ -926,21 +926,23 @@ class DiceGameTracker: DiceGameDelegate {
 //
 //}
 
-let threeTimesTable = TimesTable(multiplier: 3)
-print("six times three is \(threeTimesTable[6])")
+//let threeTimesTable = TimesTable(multiplier: 3)
+//print("six times three is \(threeTimesTable[6])")
+//
+//var matrix = Matrix(rows: 2, columns: 3)
+//
+//matrix[0,1] = 9.0
+//matrix[1,2] = 8.9
+//
+//for item in matrix.grid {
+//    print(" \(item)")
+//}
+//
+//let errorValue = matrix[9,9]
+//
+//let someVehicle = Vehicle()
 
-var matrix = Matrix(rows: 2, columns: 3)
-
-matrix[0,1] = 9.0
-matrix[1,2] = 8.9
-
-for item in matrix.grid {
-    print(" \(item)")
-}
-
-let errorValue = matrix[9,9]
-
-let someVehicle = Vehicle()
+customClassFun()
 
 
 

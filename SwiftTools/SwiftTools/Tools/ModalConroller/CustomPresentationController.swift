@@ -61,7 +61,7 @@ class CustomPresentationController: UIPresentationController {
             self.dimmingView?.removeFromSuperview()
         }
     }
-    
+
     override var frameOfPresentedViewInContainerView: CGRect {
         let containerBounds = self.containerView?.bounds
         let presentedViewFrame = CGRect.init(x: (containerBounds?.size.width)! / 2.0 - 150, y: (containerBounds?.size.height)! / 2 - 200, width: 300.0, height: 330.0)

@@ -294,7 +294,7 @@
 		8F8AB66C1FA17E1B0049D7F1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				8FA952DB21B66074005F596C /* ModalConroller */,
+				8FA952DB21B66074005F596C /* ModalController */,
 				8F954B0521B4DC320072AC6E /* CustomView */,
 				8F954B0021B4CEBE0072AC6E /* ConstraintToMargin */,
 				8F638CE8213FE07100D69C4F /* CircleSlider */,
@@ -362,7 +362,7 @@
 			path = BuleTooth;
 			sourceTree = "<group>";
 		};
-		8FA952DB21B66074005F596C /* ModalConroller */ = {
+		8FA952DB21B66074005F596C /* ModalController */ = {
 			isa = PBXGroup;
 			children = (
 				8FA952DC21B66246005F596C /* ModalViewController.swift */,
@@ -371,7 +371,7 @@
 				8FAB839B21B7A34800CFA9CF /* DatePickerViewController.swift */,
 				8FAB839C21B7A34800CFA9CF /* DatePickerViewController.xib */,
 			);
-			path = ModalConroller;
+			path = ModalController;
 			sourceTree = "<group>";
 		};
 		8FB6FF1A2022EA92005E57F8 /* MVVM */ = {

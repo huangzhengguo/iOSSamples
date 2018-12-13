@@ -11,12 +11,20 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    let toolsTitleArray = ["圆形调光", "KVO", "Coredata", "MVVM", "BlueTooth" ,"曲线图", "CircleSlider", "ConstraintToMargin", "UIPresentationController"]
+    let toolsTitleArray = ["圆形调光", "KVO", "Coredata", "MVVM", "BlueTooth" ,"曲线图", "CircleSlider", "ConstraintToMargin", "UIPresentationController", "贝塞尔曲线"]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.title = "Tools"
         self.navigationController?.title = "Tools"
+        
+//        // 设置导航栏背景图片
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage.init(named: "horizontal.png"), for: .default)
+//        // 取出分割线
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.isTranslucent = true
+//        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -68,8 +76,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             viewController = CircleSliderViewController(nibName: "CircleSliderViewController", bundle: nil)
         } else if indexPath.row == 7 {
             viewController = ConstraintToMarginViewController(nibName: "ConstraintToMarginViewController", bundle: nil)
-        } else {
+        } else if indexPath.row == 8 {
             viewController = ModalViewController(nibName: "ModalViewController", bundle: nil)
+        } else {
+            viewController = BezierPathViewController(nibName: "BezierPathViewController", bundle: nil)
         }
         
         self.navigationController?.pushViewController(viewController, animated: true)

@@ -14,7 +14,6 @@ class ModalViewController: UIViewController,UIViewControllerTransitioningDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.view.backgroundColor = UIColor.lightGray
         
         datePickerViewController = DatePickerViewController(nibName: "DatePickerViewController", bundle: nil)

@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    let toolsTitleArray = ["圆形调光", "KVO", "Coredata", "MVVM", "BlueTooth" ,"曲线图", "CircleSlider", "ConstraintToMargin", "UIPresentationController", "贝塞尔曲线"]
+    let toolsTitleArray = ["圆形调光", "KVO", "Coredata", "MVVM", "BlueTooth" ,"曲线图", "CircleSlider", "ConstraintToMargin", "UIPresentationController", "贝塞尔曲线", "设计模式"]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -78,8 +78,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             viewController = ConstraintToMarginViewController(nibName: "ConstraintToMarginViewController", bundle: nil)
         } else if indexPath.row == 8 {
             viewController = ModalViewController(nibName: "ModalViewController", bundle: nil)
-        } else {
+        } else if indexPath.row == 9 {
             viewController = BezierPathViewController(nibName: "BezierPathViewController", bundle: nil)
+        } else {
+            let model = GPerson(firstName: "Tom", lastName: "Hanks")
+            let greetingViewController = GreetingViewController(nibName: "GreetingViewController", bundle: nil)
+            // let presenter = GreetingPresenter(view: greetingViewController, person: model)
+            
+            // greetingViewController.person = model
+            // greetingViewController.presenter = presenter
+            viewController = greetingViewController
         }
         
         self.navigationController?.pushViewController(viewController, animated: true)

@@ -12,8 +12,8 @@ class CircleSliderViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let circleSlider = CircleSlider(frame: CGRect(x: 50, y: 500, width: self.view.frame.width, height: self.view.frame.width))
+        self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
+        let circleSlider = CircleSlider(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.width))
         
         self.view.addSubview(circleSlider)
         

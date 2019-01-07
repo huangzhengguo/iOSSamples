@@ -11,8 +11,8 @@ import UIKit
 class CircleSlider: UIView {
     var trackColor: UIColor = UIColor.green
     var lineWidth: CGFloat = 5.0
-    var startRadian: CGFloat = CGFloat(Float.pi * 3.0 / 4.0)
-    var endRadian: CGFloat = CGFloat(Float.pi * 9.0 / 4.0)
+    var startRadian: CGFloat = CGFloat(0.0)
+    var endRadian: CGFloat = CGFloat(Float.pi * 8.0 / 4.0)
     var thumbRadius: CGFloat = 30.0
     var minValue: Float = 0.0
     var maxValue: Float = 1000.0
@@ -92,8 +92,10 @@ class CircleSlider: UIView {
         let point = recognizer.translation(in: self)
         print("point = \(point)")
         let btnX = thumbBtn.center.x
-        if (thumbBtn.center.x <= self.centerPoint.x - radius || thumbBtn.center.x >= self.centerPoint.x + radius) {
+        if (thumbBtn.center.x < self.centerPoint.x - radius) {
             thumbBtn.center = CGPoint(x: thumbBtn.center.x, y: sqrt(pow(radius, 2) - pow(thumbBtn.center.x - self.centerPoint.x, 2)) + self.centerPoint.y)
+        } else if (thumbBtn.center.x > self.centerPoint.x + radius) {
+            thumbBtn.center = CGPoint(x: thumbBtn.center.x, y: sqrt(pow(thumbBtn.center.x - self.centerPoint.x, 2) - pow(radius, 2)) + self.centerPoint.y)
         } else {
             if (thumbBtn.center.y > self.centerPoint.y) {
                 thumbBtn.center = CGPoint(x: btnX + point.x, y: sqrt(pow(radius, 2) - pow(thumbBtn.center.x - self.centerPoint.x, 2)) + self.centerPoint.y)
@@ -120,7 +122,7 @@ class CircleSlider: UIView {
         context?.beginPath()
         context?.setLineWidth(lineWidth)
         
-        context?.addArc(center: centerPoint, radius: radius, startAngle: startRadian, endAngle: currentRadian, clockwise: false)
+        context?.addArc(center: centerPoint, radius: radius, startAngle: startRadian, endAngle: endRadian, clockwise: false)
         
         context?.strokePath()
     }

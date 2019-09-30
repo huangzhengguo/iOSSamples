@@ -15,7 +15,7 @@ class ColorCircleViewController: UIViewController {
     var circleSliderArray: [CircularSlider] = [CircularSlider]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         setViews()
     }
@@ -25,6 +25,13 @@ class ColorCircleViewController: UIViewController {
         manualColorView = ColorCircleView(frame: manualColorViewFrame, channelNum: 6, colorArray: [UIColor.red, UIColor.green, UIColor.blue, UIColor.white, UIColor.yellow, UIColor.cyan], colorPercentArray: [50,50,50,50,50,50], colorTitleArray: ["1","2","3","4","5","6"])
         
         self.view.addSubview(manualColorView!)
+        
+        self.view.setNeedsLayout()
+        self.view.layoutIfNeeded()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
     }
     
     override func didReceiveMemoryWarning() {

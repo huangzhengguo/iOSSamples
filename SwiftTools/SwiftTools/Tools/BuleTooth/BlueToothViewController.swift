@@ -19,6 +19,11 @@ class BlueToothViewController: UIViewController, CBCentralManagerDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tableView.setNeedsLayout()
+        self.tableView.layoutIfNeeded()
+        
+        print(self.tableView.frame)
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -78,6 +83,13 @@ class BlueToothViewController: UIViewController, CBCentralManagerDelegate, UITab
         cell?.textLabel?.text = peripheral.name
         
         return cell!
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        print("viewDidLayoutSubviews")
+        print(self.tableView.frame)
     }
     
     override func didReceiveMemoryWarning() {

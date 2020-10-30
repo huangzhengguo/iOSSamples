@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4260CAD408C421C1AACBFF3C /* Pods_SwiftTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAD74B0B725E76001F3F2D0 /* Pods_SwiftTools.framework */; };
 		4A660B21361B869CC7133AD6 /* Pods_SwiftToolsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7929D83AC733AA39732B97E4 /* Pods_SwiftToolsTests.framework */; };
 		8F1B7E182123F65500926A0E /* MultipleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1B7E172123F65500926A0E /* MultipleSlider.swift */; };
 		8F44DC8022D744E5001A38ED /* ScrollviewConstraintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F44DC7E22D744E5001A38ED /* ScrollviewConstraintViewController.swift */; };
@@ -65,6 +64,9 @@
 		8FA952E121B665FD005F596C /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA952E021B665FD005F596C /* CustomPresentationController.swift */; };
 		8FAB839D21B7A34800CFA9CF /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAB839B21B7A34800CFA9CF /* DatePickerViewController.swift */; };
 		8FAB839E21B7A34800CFA9CF /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FAB839C21B7A34800CFA9CF /* DatePickerViewController.xib */; };
+		8FACA8A5237296B9005A31D9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FACA8A4237296B9005A31D9 /* CustomButton.swift */; };
+		8FACA8A823729F71005A31D9 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FACA8A623729F71005A31D9 /* CustomViewController.swift */; };
+		8FACA8A923729F71005A31D9 /* CustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FACA8A723729F71005A31D9 /* CustomViewController.xib */; };
 		8FB6FF1D2022EABA005E57F8 /* MvvmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6FF1B2022EABA005E57F8 /* MvvmViewController.swift */; };
 		8FB6FF1E2022EABA005E57F8 /* MvvmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB6FF1C2022EABA005E57F8 /* MvvmViewController.xib */; };
 		8FB6FF202022F3E6005E57F8 /* MvvmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB6FF1F2022F3E6005E57F8 /* MvvmModel.swift */; };
@@ -167,6 +169,9 @@
 		8FA952E021B665FD005F596C /* CustomPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
 		8FAB839B21B7A34800CFA9CF /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		8FAB839C21B7A34800CFA9CF /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
+		8FACA8A4237296B9005A31D9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		8FACA8A623729F71005A31D9 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		8FACA8A723729F71005A31D9 /* CustomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomViewController.xib; sourceTree = "<group>"; };
 		8FB6FF1B2022EABA005E57F8 /* MvvmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmViewController.swift; sourceTree = "<group>"; };
 		8FB6FF1C2022EABA005E57F8 /* MvvmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MvvmViewController.xib; sourceTree = "<group>"; };
 		8FB6FF1F2022F3E6005E57F8 /* MvvmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmModel.swift; sourceTree = "<group>"; };
@@ -187,7 +192,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F4A1CA622606DDD00D77D79 /* SystemConfiguration.framework in Frameworks */,
-				4260CAD408C421C1AACBFF3C /* Pods_SwiftTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +368,7 @@
 		8F8AB66C1FA17E1B0049D7F1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				8FACA89F237295FD005A31D9 /* CustomButton */,
 				8F59952B2323573900E07694 /* KVC */,
 				8FE22269231B623A00449E87 /* CharacterSet */,
 				8F44DC7D22D74445001A38ED /* ScrollviewConstraint */,
@@ -478,6 +483,16 @@
 				8FAB839C21B7A34800CFA9CF /* DatePickerViewController.xib */,
 			);
 			path = ModalController;
+			sourceTree = "<group>";
+		};
+		8FACA89F237295FD005A31D9 /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				8FACA8A4237296B9005A31D9 /* CustomButton.swift */,
+				8FACA8A623729F71005A31D9 /* CustomViewController.swift */,
+				8FACA8A723729F71005A31D9 /* CustomViewController.xib */,
+			);
+			path = CustomButton;
 			sourceTree = "<group>";
 		};
 		8FB6FF1A2022EA92005E57F8 /* MVVM */ = {
@@ -643,6 +658,7 @@
 				8FE621301FCCF9AE0035ED1D /* launch1.png in Resources */,
 				8F8C3F7C21C2322700283690 /* BezierPathViewController.xib in Resources */,
 				8FE621341FCD040F0035ED1D /* launch2.png in Resources */,
+				8FACA8A923729F71005A31D9 /* CustomViewController.xib in Resources */,
 				8FCFE8C122719B0E000FD3A2 /* AnimationsViewController.xib in Resources */,
 				8FAB839E21B7A34800CFA9CF /* DatePickerViewController.xib in Resources */,
 				8F7F4F231FBA98D600C20E33 /* DataCoreExampleViewController.xib in Resources */,
@@ -855,6 +871,7 @@
 				8F7F4F171FBA7D1300C20E33 /* StockModel.swift in Sources */,
 				8FA952DE21B66246005F596C /* ModalViewController.swift in Sources */,
 				8F8AB66E1FA17E350049D7F1 /* ManualAutoSwitchView.swift in Sources */,
+				8FACA8A5237296B9005A31D9 /* CustomButton.swift in Sources */,
 				8F8DCBF42126DA9B00A94CC4 /* PlotView.swift in Sources */,
 				8F7F4F431FBAB87C00C20E33 /* Group+CoreDataProperties.swift in Sources */,
 				8F9F86F4205BAC6900608B7E /* BlueToothViewController.swift in Sources */,
@@ -868,6 +885,7 @@
 				8F599532232380D100E07694 /* KVCViewController.swift in Sources */,
 				8F9BEB5C21C79C610031E4C8 /* GreetingViewController.swift in Sources */,
 				8F638CED213FE31400D69C4F /* CircleSliderViewController.swift in Sources */,
+				8FACA8A823729F71005A31D9 /* CustomViewController.swift in Sources */,
 				8F7F4F411FBAB87C00C20E33 /* Brand+CoreDataProperties.swift in Sources */,
 				8F8AB63E1FA17DFD0049D7F1 /* ViewController.swift in Sources */,
 				8F8AB63C1FA17DFD0049D7F1 /* AppDelegate.swift in Sources */,
@@ -1046,11 +1064,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VS9QL3ZC89;
 				INFOPLIST_FILE = SwiftTools/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huang.SwiftTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1064,11 +1082,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VS9QL3ZC89;
 				INFOPLIST_FILE = SwiftTools/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huang.SwiftTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

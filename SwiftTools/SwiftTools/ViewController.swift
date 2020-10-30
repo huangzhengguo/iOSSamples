@@ -11,12 +11,28 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    let toolsTitleArray = ["圆形调光", "KVO", "Coredata", "MVVM", "BlueTooth" ,"曲线图", "CircleSlider", "ConstraintToMargin", "UIPresentationController", "贝塞尔曲线", "设计模式", "动画"]
+    var toolsTitleArray = ["圆形调光",
+                           "KVO",
+                           "Coredata",
+                           "MVVM",
+                           "BlueTooth",
+                           "曲线图",
+                           "CircleSlider",
+                           "ConstraintToMargin",
+                           "UIPresentationController",
+                           "贝塞尔曲线",
+                           "设计模式",
+                           "动画",
+                           "自定义控件"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.title = "Tools"
         self.navigationController?.title = "Tools"
+        
+        // 对数组排序
+//        toolsTitleArray = Array.sort(&toolsTitleArray)
         
 //        // 设置导航栏背景图片
 //        self.navigationController?.navigationBar.setBackgroundImage(UIImage.init(named: "horizontal.png"), for: .default)
@@ -88,8 +104,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             // greetingViewController.person = model
             // greetingViewController.presenter = presenter
             viewController = greetingViewController
-        } else {
+        } else if indexPath.row == 11 {
             viewController = AnimationsViewController(nibName: "AnimationsViewController", bundle: nil)
+        } else {
+            viewController = CustomViewController(nibName: "CustomViewController", bundle: nil)
         }
         
         self.navigationController?.pushViewController(viewController, animated: true)

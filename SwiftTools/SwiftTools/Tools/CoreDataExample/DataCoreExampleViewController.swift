@@ -33,20 +33,20 @@ class DataCoreExampleViewController: UIViewController, UITableViewDelegate, UITa
         
         // 2.获取分组信息
         let brand = brands.first as! Brand
-        let groups = brand.brand_group?.sorted(by: {UIContentSizeCategory(rawValue: ($0 as! Group).name!) > UIContentSizeCategory(rawValue: ($1 as! Group).name!)})
-        for g in groups! {
-            let group = g as! Group
-            
-            // 3.构建设备信息数据源
-            var deviceArray: [Device] = [Device]().sorted(by: {UIContentSizeCategory(rawValue: ($0 ).name!) > UIContentSizeCategory(rawValue: ($1 ).name!)})
-            for d in group.group_device! {
-                let device = d as! Device
-                
-                deviceArray.append(device)
-            }
-            
-            datasourceDic[group.name!] = deviceArray
-        }
+//        let groups = brand.brand_group?.sorted(by: {UIContentSizeCategory(rawValue: ($0 as! Group).name!) > UIContentSizeCategory(rawValue: ($1 as! Group).name!)})
+//        for g in groups! {
+//            let group = g as! Group
+//            
+//            // 3.构建设备信息数据源
+//            var deviceArray: [Device] = [Device]().sorted(by: {UIContentSizeCategory(rawValue: ($0 ).name!) > UIContentSizeCategory(rawValue: ($1 ).name!)})
+//            for d in group.group_device! {
+//                let device = d as! Device
+//                
+//                deviceArray.append(device)
+//            }
+//            
+//            datasourceDic[group.name!] = deviceArray
+//        }
         
         tableView.reloadData()
     }

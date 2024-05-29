@@ -1,6 +1,0 @@
-${PODS_ROOT}/Target Support Files/Pods-Samples-SamplesUITests/Pods-Samples-SamplesUITests-frameworks.sh
-${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework
-${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework
-${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework
-${BUILT_PRODUCTS_DIR}/MqttCocoaAsyncSocket/MqttCocoaAsyncSocket.framework
-${BUILT_PRODUCTS_DIR}/SwiftCBOR/SwiftCBOR.framework

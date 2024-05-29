@@ -1,6 +1,0 @@
-framework module Pods_HzgTools {
-  umbrella header "Pods-HzgTools-umbrella.h"
-
-  export *
-  module * { export * }
-}
